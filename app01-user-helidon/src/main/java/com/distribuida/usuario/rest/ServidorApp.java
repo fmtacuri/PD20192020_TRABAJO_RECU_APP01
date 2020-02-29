@@ -56,7 +56,7 @@ public class ServidorApp extends Application {
 	}
 
 	//Creamos una lista para la conexion con Fabio
-	List<String> tags = Arrays.asList("urlprefix-/todos");
+	List<String> tags = Arrays.asList("urlprefix-/users");
 	
 	public void init(@Observes @Initialized(ApplicationScoped.class) Object init) {
 

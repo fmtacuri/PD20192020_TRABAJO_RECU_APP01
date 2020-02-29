@@ -15,7 +15,7 @@ import javax.ws.rs.Produces;
 import com.distribuida.usuario.dto.UsuarioDto;
 import com.distribuida.usuario.service.UsuarioService;
 
-@Path("/usuarios")
+@Path("/users")
 @Produces("application/json")
 @Consumes("application/json")
 @ApplicationScoped
