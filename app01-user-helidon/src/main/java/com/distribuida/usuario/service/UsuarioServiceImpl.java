@@ -25,7 +25,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 	@Override
 	public List<Usuario> findAll() {
-		TypedQuery<Usuario> query = em.createQuery("Select e from Usuario e", Usuario.class);
+		TypedQuery<Usuario> query = em.createQuery("Select o from Usuario o", Usuario.class);
 		List<Usuario> Usuario = query.getResultList();
 		return Usuario;
 	}
