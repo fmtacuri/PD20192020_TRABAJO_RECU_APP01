@@ -1,0 +1,7 @@
+CREATE TABLE geo
+(
+  id serial NOT NULL,
+  lat character varying(255),
+  lng character varying(255),
+  CONSTRAINT geo_pkey PRIMARY KEY (id)
+)

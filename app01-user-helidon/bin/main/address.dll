@@ -1,12 +1,17 @@
-CREATE TABLE IF NOT EXISTS ADDRESS (
-    ID INTEGER NOT NULL PRIMARY KEY,
-	USERID INTEGER NOT NULL,
-	STREET VARCHAR(60) NOT NULL,
-	SUITE VARCHAR(60) NOT NULL,
-	CITY VARCHAR(60) NOT NULL,
-	ZIPCODE VARCHAR(60) NOT NULL
-);
+CREATE TABLE address
+(
+  id serial NOT NULL,
+  city character varying(255),
+  street character varying(255),
+  suite character varying(255),
+  zipcode character varying(255),
+  geoid integer,
+  CONSTRAINT address_pkey PRIMARY KEY (id),
+  CONSTRAINT address_geoid_fkey FOREIGN KEY (geoid)
+      REFERENCES geo (id) MATCH SIMPLE
+      ON UPDATE NO ACTION ON DELETE NO ACTION
+)
 
-INSERT INTO USUARIO VALUES (1, 1, 'A1','A1', 'A1','A1');
-INSERT INTO USUARIO VALUES (2, 2, 'A2','A2', 'A2','A2');
-INSERT INTO USUARIO VALUES (3, 3, 'A3','A3', 'A3','A3');
+INSERT INTO address VALUES (1, 1, 'A1','A1', 'A1','A1');
+INSERT INTO address VALUES (2, 2, 'A2','A2', 'A2','A2');
+INSERT INTO address VALUES (3, 3, 'A3','A3', 'A3','A3');

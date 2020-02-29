@@ -2,13 +2,13 @@ package com.distribuida.usuario.service;
 
 import java.util.List;
 
-import com.distribuida.usuario.dto.UsuarioDto;
+import com.distribuida.usuario.db.Usuario;
 
 public interface UsuarioService {
 	
 	//Listo
-	public UsuarioDto findById(Integer id);
+	public Usuario findById(Integer id);
 	
 	// Listo
-	public List<UsuarioDto> findAll( );
+	public List<Usuario> findAll( );
 }

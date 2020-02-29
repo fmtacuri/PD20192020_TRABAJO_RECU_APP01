@@ -1,0 +1,8 @@
+CREATE TABLE company
+(
+  id serial NOT NULL,
+  bs character varying(255),
+  catchphrase character varying(255),
+  name character varying(255),
+  CONSTRAINT company_pkey PRIMARY KEY (id)
+)

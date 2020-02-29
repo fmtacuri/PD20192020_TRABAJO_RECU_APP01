@@ -12,7 +12,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import com.distribuida.usuario.dto.UsuarioDto;
+import com.distribuida.usuario.db.Usuario;
 import com.distribuida.usuario.service.UsuarioService;
 
 @Path("/users")
@@ -28,13 +28,13 @@ public class UsuarioRest {
 	UsuarioService service;
 	
 	@GET
-	public List<UsuarioDto> findAll( ) {
+	public List<Usuario> findAll( ) {
 		return service.findAll();
 	}
 	
 	@GET
 	@Path("/{id}")
-	public UsuarioDto findById( @PathParam(value = "id") Integer id ) {
+	public Usuario findById( @PathParam(value = "id") Integer id ) {
 		return service.findById(id);
 	}
 
